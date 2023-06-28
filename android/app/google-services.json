@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "328586002388",
+    "firebase_url": "https://flutter-varios-11491.firebaseio.com",
+    "project_id": "flutter-varios-11491",
+    "storage_bucket": "flutter-varios-11491.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328586002388:android:3cc870e4652fbb2a042041",
+        "android_client_info": {
+          "package_name": "com.mirandaboris.auth_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328586002388-1rttatekliuet0hj7s80kle4o1umkhgs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mirandaboris.auth_app",
+            "certificate_hash": "5059ec4fd090c131ed9cdf7d80ba8fc1b14b9a7c"
+          }
+        },
+        {
+          "client_id": "328586002388-n0qdr4frvk7i3vnllqhesa578fqs3nak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBew-KEFoTwMpZXDPjGgpBQaHUH-9_4sYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328586002388-n0qdr4frvk7i3vnllqhesa578fqs3nak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

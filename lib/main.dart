@@ -1,5 +1,8 @@
+import 'package:auth_app/services/api_status.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'services/google_sign_in_service.dart';
 
 void main() => runApp(const MyApp());
 
@@ -9,11 +12,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Auth - Google - Apple'),
-          actions: [IconButton(onPressed: () {}, icon: const Icon(FontAwesomeIcons.doorOpen))],
+          centerTitle: true,
+          actions: [
+            IconButton(
+              onPressed: () async {
+                await GooogleSignInServices.signOut();
+              },
+              icon: const Icon(FontAwesomeIcons.doorOpen),
+            )
+          ],
         ),
         body: Container(
           padding: const EdgeInsets.all(10),
@@ -27,7 +39,15 @@ class MyApp extends StatelessWidget {
                   height: 50,
                   color: Colors.red,
                   shape: const StadiumBorder(),
-                  onPressed: () {},
+                  onPressed: () async {
+                    final result = await GooogleSignInServices.signIngWithGoogle();
+                    if (result is Success) {
+                      print(result.response);
+                    }
+                    if (result is Failure) {
+                      print(result.errorResponse);
+                    }
+                  },
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
